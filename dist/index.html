@@ -11,7 +11,7 @@
 
 <body class="font-[Rajdhani]">
 
-    <header class="bg-white px-6 py-4 flex justify-between items-center w-100">
+    <header class="bg-white px-6 py-4 flex justify-between items-center z-20 fixed w-full">
         <a class="logo" href="#">
             <img src="../src/images/logo.png" width="100"/>
         </a> 
@@ -36,16 +36,18 @@
         <ion-icon onclick="onToggleMenu(this)" name="menu" class="toggle text-3xl cursor-pointer md:hidden"></ion-icon>
     </header>
 
-    <section class="banner relative bg-black h-[85vh]">
-        <video id="myvideo" class="h-full w-full object-cover" autoplay muted loop ="100%" height="" controls poster="../src/images/banner-img.png">
-            <source src="../src/images/video.mp4" type="video/mp4">            
-        </video>
+    <section class="banner relative bg-black h-[95vh] pt-[100px]">
+        <div class="h-full w-full overflow-hidden">
+            <video id="myvideo" class="h-full w-full object-cover fixed z-0 inset-0" autoplay muted loop>
+                <source src="../src/images/video.mp4" type="video/mp4">
+            </video>
+        </div>
         <a href="#quienes_somos">
             <img src="../src/images/down-banner-arrow.svg" class="w-20 cursor-pointer absolute bottom-3 right-0 left-0 z-10 mx-auto">
         </a>
-    </section>    
+    </section>
 
-    <section id="quienes_somos" class="section2 pt-10 md:pt-16">
+    <section id="quienes_somos" class="section2 pt-10 md:pt-16 bg-white relative z-10">
         <div class="container mx-auto px-3">
             <div class="main_content px-5 sm:px-10 md:px-20">
                 <div class="main_heading flex items-center relative right-5 sm:right-10 md:right-20">
@@ -80,7 +82,7 @@
         </div>
     </section>
 
-    <section class="section3 bg-black py-20 md:py-36 xl:py-48">
+    <section class="section3 bg-black py-20 md:py-36 xl:py-48 relative z-10">
         <div class="container mx-auto px-3">
             <div class="main_content flex justify-center items-center">
                 <div class="text-center">
@@ -94,7 +96,7 @@
         </div>
     </section>
 
-    <section id="nuestro_feed" class="section4 pt-10 pb-8 lg:pb-32">
+    <section id="nuestro_feed" class="section4 pt-10 pb-8 lg:pb-32 bg-white relative z-10">
         <div class="container mx-auto px-3">
             <div class="main_content px-5 sm:px-10 md:px-20">
                 <div class="flex flex-wrap justify-end">
@@ -120,7 +122,7 @@
         </div>
     </section>
 
-    <section id="contacto" class="section5 pt-10 pb-20">
+    <section id="contacto" class="section5 pt-10 pb-20 bg-white relative z-10">
         <div class="container mx-auto px-3">
             <div class="main_content px-5 sm:px-10 md:px-14 lg:px-20 flex-wrap flex md:flex-nowrap">
                 <div class="md:w-1/2 w-full">
@@ -147,7 +149,7 @@
         </div>
     </section>
 
-    <footer class="bg-black py-5 px-6 flex justify-between items-center">
+    <footer class="bg-black py-5 px-6 flex justify-between items-center relative z-10">
         <img src="../src/images/logo-b-white.png" class="sm:w-7 w-5">
         <h5 class="text-white text-base">© BLEND 2023 ALL RIGHTS RESERVED.</h5>
         <img src="../src/images/insta-white-icon.png" class="sm:w-7 w-5">
@@ -179,7 +181,7 @@
                 if( target.length ) {
                     event.preventDefault();
                     $('html, body').stop().animate({
-                    scrollTop: target.offset().top -0
+                    scrollTop: target.offset().top - 100
                 }, 1000);
             }
         });
