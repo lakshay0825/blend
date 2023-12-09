@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blend</title>
-
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">       
 </head>
+
 <body class="font-[Rajdhani]">
 
     <header class="bg-white px-6 py-4 flex justify-between items-center w-100">
@@ -23,32 +18,35 @@
         <nav class="nav-links md:static absolute bg-white md:min-h-fit min-h-[50vh] top-[-100%] left right-0 md:w-auto w-full flex md:items-center p-5 z-10">
             <ul class="flex md:flex-row flex-col font-bold text-black text-xl uppercase gap-8 md:10">
                 <li>
-                    <a href="#" class="hover:text-gray-500">QUIÉNES SOMOS?</a>
+                    <a href="#quienes_somos" class="hover:text-gray-500">QUIÉNES SOMOS?</a>
                 </li>
                 <li>
                     <a href="#" class="hover:text-gray-500">GALERÍA</a> 
                 </li>
                 <li>
-                    <a href="#" class="hover:text-gray-500">BROCHURE</a>
+                    <a href="#" class="hover:text-gray-500 relative">BROCHURE
+                        <img src="../src/images/menu-down-arrow.png" class="absolute w-2.5 top-[0.4rem] -right-4"/>
+                    </a>
                 </li>
                 <li>
-                    <a href="#" class="hover:text-gray-500">CONTACTO</a>
+                    <a href="#contacto" class="hover:text-gray-500">CONTACTO</a>
                 </li>
             </ul>
         </nav>
         <ion-icon onclick="onToggleMenu(this)" name="menu" class="toggle text-3xl cursor-pointer md:hidden"></ion-icon>
     </header>
 
-    <!-- <section class="banner_section h-[520px]" >
-        <img src="../src/images/banner-img.png" class="w-[100%] h-[100%] object-cover">
-    </section> -->
+    <section class="banner relative bg-black h-[85vh]">
+        <video id="myvideo" class="h-full w-full object-cover" autoplay muted loop ="100%" height="" controls poster="../src/images/banner-img.png">
+            <source src="../src/images/video.mp4" type="video/mp4">            
+        </video>
+        <a href="#quienes_somos">
+            <img src="../src/images/down-banner-arrow.svg" class="w-20 cursor-pointer absolute bottom-3 right-0 left-0 z-10 mx-auto">
+        </a>
+    </section>    
 
-    <video id="video" autoplay muted width="100%" height="" controls poster="../src/images/banner-img.png">
-         <source src="../src/images/video.mp4" type="video/mp4">
-      </video>
-
-    <section class="section2 pt-10 md:pt-16">
-        <div class="containter w-[100%] px-4 mw-[1490]">
+    <section id="quienes_somos" class="section2 pt-10 md:pt-16">
+        <div class="container mx-auto px-3">
             <div class="main_content px-5 sm:px-10 md:px-20">
                 <div class="main_heading flex items-center relative right-5 sm:right-10 md:right-20">
                     <img src="../src/images/arrow.png" class="md:w-20 w-10 mr-4">
@@ -83,19 +81,21 @@
     </section>
 
     <section class="section3 bg-black py-20 md:py-36 xl:py-48">
-        <div class="containter w-[100%] px-4 mw-[1490]">
+        <div class="container mx-auto px-3">
             <div class="main_content flex justify-center items-center">
                 <div class="text-center">
                     <img src="../src/images/blend-img.png" class="w-2xl md:max-w-2xl" />
                     <h3 class="uppercase text-white text-xl md:text-3xl xl:text-4xl tracking-widest py-5">DESCARGA NUESTRO BROCHURE</h3>
-                    <img src="../src/images/down-arrow.png" class="m-auto w-10" />
+                    <a href="#nuestro_feed">
+                        <img src="../src/images/down-arrow.png" class="m-auto w-10" />
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section4 pt-10 pb-8 lg:pb-32">
-        <div class="containter w-[100%] px-4 mw-[1490]">
+    <section id="nuestro_feed" class="section4 pt-10 pb-8 lg:pb-32">
+        <div class="container mx-auto px-3">
             <div class="main_content px-5 sm:px-10 md:px-20">
                 <div class="flex flex-wrap justify-end">
                     <div class="main_heading flex items-center relative left-5 sm:left-10 md:left-16">
@@ -120,8 +120,8 @@
         </div>
     </section>
 
-    <section class="section5 pt-10 pb-20">
-        <div class="containter w-[100%] px-4 mw-[1490]">
+    <section id="contacto" class="section5 pt-10 pb-20">
+        <div class="container mx-auto px-3">
             <div class="main_content px-5 sm:px-10 md:px-14 lg:px-20 flex-wrap flex md:flex-nowrap">
                 <div class="md:w-1/2 w-full">
                     <div class="main_heading flex items-center relative right-5 sm:right-10 md:right-14">
@@ -155,19 +155,36 @@
 
 
 
+    <script src="../src/js/jquery.min.js"></script>  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>  
+
     <script>
+
+        // Toggle script
         const navLinks = document.querySelector('.nav-links')
         function onToggleMenu(e){
             e.name = e.name === 'menu' ? 'close' : 'menu'
             navLinks.classList.toggle('top-[4rem]')
-        }
-        
-        // $(".toggle").click(function(){
-        //     $("body").toggleClass("main");
-        // });
+        }  
 
-        $("#video")[0].autoplay = true;
-        
+        // Hide controls Script
+        var vids = $("video"); 
+        $.each(vids, function(){
+            this.controls = false; 
+        });  
+
+        // on click go to particular section
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                    scrollTop: target.offset().top -0
+                }, 1000);
+            }
+        });
+
     </script>
+
 </body>
 </html>
