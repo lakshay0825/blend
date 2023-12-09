@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blend</title>
     <link rel="stylesheet" href="style.css">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">       
 </head>
@@ -15,7 +16,7 @@
         <a class="logo" href="#">
             <img src="../src/images/logo.png" width="100"/>
         </a> 
-        <nav class="nav-links md:static absolute bg-white md:min-h-fit min-h-[50vh] top-[-100%] left right-0 md:w-auto w-full flex md:items-center p-5 z-10">
+        <nav class="nav-links md:static absolute bg-white md:min-h-fit min-h-[50vh] hidden md:flex left right-0 md:w-auto w-full md:items-center p-5 z-10">
             <ul class="flex md:flex-row flex-col font-bold text-black text-xl uppercase gap-8 md:10">
                 <li>
                     <a href="#quienes_somos" class="hover:text-gray-500">QUIÉNES SOMOS?</a>
@@ -38,8 +39,9 @@
 
     <section class="banner relative bg-black h-[95vh] pt-[100px]">
         <div class="h-full w-full overflow-hidden">
-            <video id="myvideo" class="h-full w-full object-cover fixed z-0 inset-0" autoplay muted loop>
+            <video id="myvideo" class="h-full w-full object-cover fixed z-0 inset-0" autoplay muted loop playsinline>
                 <source src="../src/images/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
         </div>
         <a href="#quienes_somos">
@@ -47,7 +49,7 @@
         </a>
     </section>
 
-    <section id="quienes_somos" class="section2 py-10 md:py-16 bg-white relative z-10">
+    <section id="quienes_somos" class="section2 pt-10 md:pt-16 pb-3 md:pb-5 bg-white relative z-10">
         <div class="container mx-auto px-3">
             <div class="main_content px-5 sm:px-10 md:px-20">
                 <div class="main_heading flex items-center relative right-5 sm:right-10 md:right-20">
@@ -166,6 +168,8 @@
         const navLinks = document.querySelector('.nav-links')
         function onToggleMenu(e){
             e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('hidden')
+            navLinks.classList.toggle('flex')
             navLinks.classList.toggle('top-[4rem]')
         }  
 
