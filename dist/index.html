@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blend</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+<body class="font-[Rajdhani]">
+
+    <header class="bg-white px-6 py-4 flex justify-between items-center w-100">
+        <a class="logo" href="#">
+            <img src="../src/images/logo.png" width="100"/>
+        </a> 
+        <nav class="nav-links md:static absolute bg-white md:min-h-fit min-h-[50vh] top-[-100%] left right-0 md:w-auto w-full flex md:items-center p-5 z-10">
+            <ul class="flex md:flex-row flex-col font-bold text-black text-xl uppercase gap-8 md:10">
+                <li>
+                    <a href="#" class="hover:text-gray-500">QUIÉNES SOMOS?</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-gray-500">GALERÍA</a> 
+                </li>
+                <li>
+                    <a href="#" class="hover:text-gray-500">BROCHURE</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-gray-500">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+        <ion-icon onclick="onToggleMenu(this)" name="menu" class="toggle text-3xl cursor-pointer md:hidden"></ion-icon>
+    </header>
+
+    <!-- <section class="banner_section h-[520px]" >
+        <img src="../src/images/banner-img.png" class="w-[100%] h-[100%] object-cover">
+    </section> -->
+
+    <video id="video" autoplay muted width="100%" height="" controls poster="../src/images/banner-img.png">
+         <source src="../src/images/video.mp4" type="video/mp4">
+      </video>
+
+    <section class="section2 pt-10 md:pt-16">
+        <div class="containter w-[100%] px-4 mw-[1490]">
+            <div class="main_content px-5 sm:px-10 md:px-20">
+                <div class="main_heading flex items-center relative right-5 sm:right-10 md:right-20">
+                    <img src="../src/images/arrow.png" class="md:w-20 w-10 mr-4">
+                    <h2 class="text-3xl md:text-5xl">QUIÉNES SOMOS?</h2>
+                </div>
+                <p class="text-xl md:text-2xl text-center pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, 
+                    consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. 
+                    Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                </p>
+                <p class="text-xl md:text-2xl text-center pb-0 sm:pb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, 
+                    consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. 
+                    Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                </p>
+                <div class="threeBox flex sm:flex-nowrap flex-wrap items-center justify-around my-6">
+                    <div class="box text-center h-48 flex flex-wrap justify-center items-end px-3 mb-5 sm:mb-0">                        
+                        <img src="../src/images/sofa-img.png" width="220px"/>
+                        <h4 class="uppercase text-xl sm:text-3xl w-full">DISEÑO</h4>                        
+                    </div>
+                    <div class="box text-center h-48 flex flex-wrap justify-center items-end px-3 mb-5 sm:mb-0">                        
+                        <img src="../src/images/table-img.png" width="220px"/>
+                        <h4 class="uppercase text-xl sm:text-3xl w-full">DECORACIÓN</h4>                        
+                    </div> 
+                    <div class="box text-center h-48 flex flex-wrap justify-center items-end px-3 mb-5 sm:mb-0">                        
+                        <img src="../src/images/chair-img.png" width="140px"/>
+                        <h4 class="uppercase text-xl sm:text-3xl w-full">INSPIRACIÓN</h4>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section3 bg-black py-20 md:py-36 xl:py-48">
+        <div class="containter w-[100%] px-4 mw-[1490]">
+            <div class="main_content flex justify-center items-center">
+                <div class="text-center">
+                    <img src="../src/images/blend-img.png" class="w-2xl md:max-w-2xl" />
+                    <h3 class="uppercase text-white text-xl md:text-3xl xl:text-4xl tracking-widest py-5">DESCARGA NUESTRO BROCHURE</h3>
+                    <img src="../src/images/down-arrow.png" class="m-auto w-10" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section4 pt-10 pb-8 lg:pb-32">
+        <div class="containter w-[100%] px-4 mw-[1490]">
+            <div class="main_content px-5 sm:px-10 md:px-20">
+                <div class="flex flex-wrap justify-end">
+                    <div class="main_heading flex items-center relative left-5 sm:left-10 md:left-16">
+                        <img src="../src/images/insta-icon.png" class="w-10 md:w-12">
+                        <h2 class="text-3xl md:text-5xl mx-4">NUESTRO FEED</h2>
+                        <img src="../src/images/right-arrow.png" class="md:w-20 w-10">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                    <div class="colorBox m-3 h-64 bg-black">
+                    </div>
+                    <div class="colorBox m-3 h-64 bg-black">
+                    </div>
+                    <div class="colorBox m-3 h-64 bg-black">
+                    </div>
+                    <div class="colorBox m-3 h-64 bg-black">
+                    </div>                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="section5 pt-10 pb-20">
+        <div class="containter w-[100%] px-4 mw-[1490]">
+            <div class="main_content px-5 sm:px-10 md:px-14 lg:px-20 flex-wrap flex md:flex-nowrap">
+                <div class="md:w-1/2 w-full">
+                    <div class="main_heading flex items-center relative right-5 sm:right-10 md:right-14">
+                        <img src="../src/images/arrow.png" class="md:w-20 w-10 mr-4">
+                        <h2 class="text-3xl md:text-5xl">CONTÁCTANOS</h2>
+                    </div>
+                    <div class="contact-detail text-center md:text-left">
+                        <h3 class="text-2xl md:text-4xl">+55958070950</h3>
+                        <h3 class="text-2xl md:text-4xl pb-20 md:pb-48">paula@blenddeco.cl</h3>    
+                        <img src="../src/images/logo.png" class="w-30 md:w-48 mx-auto md:mx-0"/>               
+                    </div>
+                </div>
+                <div class="md:w-1/2 w-full mt-12">
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center justify-center md:justify-end w-full mb-5 md:mb-0">                            
+                            <h2 class="text-2xl lg:text-3xl mr-4 flex">HABLEMOS DE BLEND</h2>
+                            <img src="../src/images/whats-app-icon.svg" class="w-12">
+                        </div>
+                        <img src="../src/images/mobile-img.png" class="lg:max-w-lg w-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-5 px-6 flex justify-between items-center">
+        <img src="../src/images/logo-b-white.png" class="sm:w-7 w-5">
+        <h5 class="text-white text-base">© BLEND 2023 ALL RIGHTS RESERVED.</h5>
+        <img src="../src/images/insta-white-icon.png" class="sm:w-7 w-5">
+    </footer>
+
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[4rem]')
+        }
+        
+        // $(".toggle").click(function(){
+        //     $("body").toggleClass("main");
+        // });
+
+        $("#video")[0].autoplay = true;
+        
+    </script>
+</body>
+</html>
